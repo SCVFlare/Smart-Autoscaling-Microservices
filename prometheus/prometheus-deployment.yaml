@@ -6,6 +6,8 @@ metadata:
   labels:
     app: prometheus-server
 spec:
+  nodeSelector:
+    dedicated: master
   replicas: 1
   selector:
     matchLabels:
@@ -15,8 +17,6 @@ spec:
       labels:
         app: prometheus-server
     spec:
-      nodeSelector:
-        dedicated: master
       containers:
         - name: prometheus
           image: prom/prometheus

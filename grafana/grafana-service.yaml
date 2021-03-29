@@ -7,8 +7,6 @@ metadata:
       prometheus.io/scrape: 'true'
       prometheus.io/port:   '3000'
 spec:
-  nodeSelector:
-    dedicated: master
   selector: 
     app: grafana
   type: NodePort  

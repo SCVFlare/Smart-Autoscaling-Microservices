@@ -2,25 +2,32 @@
 
 -  `ssh grenoble.g5k`  
 
--  `oarsub -I -l nodes=2,walltime=2 -t deploy`
+-  reserve N nodes for T time `oarsub -I -l nodes=2,walltime=2 -t deploy`
 
 -  `kadeploy3 -f $OAR_NODE_FILE -e debian10-x64-std -k`
 
--  `ssh root@<machine_name>`
+-  open N frontends adn connect to machines `ssh root@<machine_name>`
 
--  `git clone https://github.com/SCVFlare/TER-2021.git`
 
 # Master  
 
--  `./TER-2021/master.sh`
+-  `git clone https://github.com/SCVFlare/TER-2021.git`
 
-- do slave part
+-  `chmod 777 -R TER-2021`
 
-- get node ip and name - `kubectl get nodes -o wide`
+-  `cd TER-2021`
 
--  `kubectl label nodes <nodename> dedicated=master`
+-  `master.sh`
 
--  `./TER-2021/deployments.sh`
+-  do slave part
+
+-  get node ip and name - `kubectl get nodes -o wide`
+
+-  for N slaves `kubectl label nodes <slave_node> dedicated=slave`
+
+-  `kubectl label nodes <master_node> dedicated=master`
+
+-  `deployments.sh`
 
 - Edit your local `./ssh/config`, make it look like `TER-2021/config` by adding your `<username>` as user and `<nodeip>` as hostname
 
@@ -40,6 +47,6 @@
 
 # Slave  
 
--  `./TER-2021/slave.sh`
+-  `slave.sh`
 
 - join cluster

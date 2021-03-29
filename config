@@ -8,7 +8,7 @@ Host *.g5k
   ProxyCommand ssh g5k -W "$(basename %h .g5k):%p"
   ForwardAgent no
 
-Host teastore-web
+Host teastore
   User bbechev
   HostName 172.16.19.3
   ProxyCommand ssh *.g5k -W %h:%p
@@ -26,7 +26,7 @@ Host prometheus
   ProxyCommand ssh *.g5k -W %h:%p
   LocalForward 30000 localhost:30000
 
-Host graphana
+Host grafana
   User bbechev
   HostName 172.16.19.3
   ProxyCommand ssh *.g5k -W %h:%p

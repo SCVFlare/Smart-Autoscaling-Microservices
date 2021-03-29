@@ -8,6 +8,8 @@ metadata:
   name: metrics-server-exporter
   namespace: kube-system
 spec:
+  nodeSelector:
+    dedicated: master
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
