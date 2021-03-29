@@ -7,6 +7,8 @@ metadata:
   name: kube-state-metrics
   namespace: kube-system
 spec:
+  nodeSelector:
+    dedicated: master
   clusterIP: None
   ports:
   - name: http-metrics

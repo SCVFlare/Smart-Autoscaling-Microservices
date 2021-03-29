@@ -1,5 +1,7 @@
 # SETUP Metrics collection on Grid 5000  
 
+-  `ssh grenoble.g5k`  
+
 -  `oarsub -I -l nodes=2,walltime=2 -t deploy`
 
 -  `kadeploy3 -f $OAR_NODE_FILE -e debian10-x64-std -k`
@@ -16,7 +18,7 @@
 
 - get node ip and name - `kubectl get nodes -o wide`
 
--  `kubectl label nodes <nodename> disktype=ssd`
+-  `kubectl label nodes <nodename> dedicated=master`
 
 -  `./TER-2021/deployments.sh`
 
