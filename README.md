@@ -17,7 +17,7 @@
 
 -  `cd TER-2021`
 
--  `master.sh`
+-  `./master.sh`
 
 -  do slave part
 
@@ -27,7 +27,7 @@
 
 -  `kubectl label nodes <master_node> dedicated=master`
 
--  `deployments.sh`
+-  `./deployments.sh`
 
 - Edit your local `./ssh/config`, make it look like `TER-2021/config` by adding your `<username>` as user and `<nodeip>` as hostname
 
@@ -47,6 +47,6 @@
 
 # Slave  
 
--  `slave.sh`
+-  `./slave.sh`
 
 - join cluster
