@@ -6,6 +6,8 @@ metadata:
   labels:
     app: prometheus-server
 spec:
+  nodeSelector:
+    disktype: ssd
   replicas: 1
   selector:
     matchLabels:

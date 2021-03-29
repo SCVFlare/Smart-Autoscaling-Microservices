@@ -17,6 +17,8 @@ spec:
         app.kubernetes.io/name: kube-state-metrics
         app.kubernetes.io/version: 2.0.0-rc.0
     spec:
+      nodeSelector:
+        disktype: ssd
       containers:
       - image: k8s.gcr.io/kube-state-metrics/kube-state-metrics:v2.0.0-rc.0
         livenessProbe:

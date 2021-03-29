@@ -14,6 +14,8 @@ spec:
       labels:
         app: grafana
     spec:
+      nodeSelector:
+        disktype: ssd
       containers:
       - name: grafana
         image: grafana/grafana:latest

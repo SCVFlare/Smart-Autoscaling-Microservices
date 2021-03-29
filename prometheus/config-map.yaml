@@ -6,17 +6,6 @@ metadata:
     name: prometheus-server-conf
   namespace: monitoring
 data:
-  prometheus.rules: |-
-    groups:
-    - name: devopscube demo alert
-      rules:
-      - alert: High Pod Memory
-        expr: sum(container_memory_usage_bytes) > 1
-        for: 1m
-        labels:
-          severity: slack
-        annotations:
-          summary: High Memory Usage
   prometheus.yml: |-
     global:
       scrape_interval: 5s
@@ -96,8 +85,14 @@ data:
           target_label: kubernetes_pod_name
       
       - job_name: 'kube-state-metrics'
+        honor_timestamps: true
+        scrape_interval: 1m
+        scrape_timeout: 1m
+        metrics_path: /metrics
+        scheme: http
         static_configs:
-          - targets: ['kube-state-metrics.kube-system.svc.cluster.local:8080']
+        - targets:
+          - kube-state-metrics.kube-system.svc.cluster.local:8080
 
       - job_name: 'kubernetes-cadvisor'
 
