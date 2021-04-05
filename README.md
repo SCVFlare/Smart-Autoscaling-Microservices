@@ -19,7 +19,7 @@
 
 -  `./master.sh`
 
--  do slave part
+-  WAIT for all to be running and do slave part
 
 -  get node ip and name - `kubectl get nodes -o wide`
 
@@ -46,6 +46,12 @@
   -  `ssh grafana`
 
 # Slave  
+
+-  `git clone https://github.com/SCVFlare/TER-2021.git`
+
+-  `chmod 777 -R TER-2021`
+
+-  `cd TER-2021`
 
 -  `./slave.sh`
 
