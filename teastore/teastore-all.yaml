@@ -5,8 +5,6 @@ metadata:
   labels:
     run: teastore-all
 spec:
-  nodeSelector:
-    dedicated: slave
   containers:
   - name: teastore-all
     image: descartesresearch/teastore-all

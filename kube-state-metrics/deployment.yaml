@@ -7,8 +7,6 @@ metadata:
   name: kube-state-metrics
   namespace: kube-system
 spec:
-  nodeSelector:
-    dedicated: master
   replicas: 1
   selector:
     matchLabels:
@@ -43,4 +41,5 @@ spec:
           runAsUser: 65534
       nodeSelector:
         kubernetes.io/os: linux
+        dedicated: master
       serviceAccountName: kube-state-metrics

@@ -4,4 +4,4 @@ kubectl create namespace monitoring
 kubectl create -f prometheus
 kubectl create -f grafana
 kubectl create -f metrics-server-exporter.yaml
-kubectl create -f teastore
+kubectl create -f teastore/teastore-clusterip.yaml

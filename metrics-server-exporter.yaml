@@ -8,8 +8,6 @@ metadata:
   name: metrics-server-exporter
   namespace: kube-system
 spec:
-  nodeSelector:
-    dedicated: master
   progressDeadlineSeconds: 600
   replicas: 1
   revisionHistoryLimit: 10
@@ -31,6 +29,8 @@ spec:
       labels:
         app: metrics-server-exporter
     spec:
+      nodeSelector:
+        dedicated: master
       containers:
         - image: ghouscht/metrics-server-exporter:0.0.1
           imagePullPolicy: Always

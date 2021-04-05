@@ -13,6 +13,8 @@ spec:
         app: teastore
         run: teastore-db
     spec:
+      nodeSelector:
+        dedicated: slave
       containers:
         - name: teastore-db
           image: descartesresearch/teastore-db
@@ -48,6 +50,8 @@ spec:
         app: teastore
         run: teastore-registry
     spec:
+      nodeSelector:
+        dedicated: slave
       containers:
         - name: teastore-registry
           image: descartesresearch/teastore-registry
@@ -83,6 +87,8 @@ spec:
         app: teastore
         run: teastore-persistence
     spec:
+      nodeSelector:
+        dedicated: slave
       containers:
         - name: teastore-persistence
           image: descartesresearch/teastore-persistence
@@ -127,6 +133,8 @@ spec:
         app: teastore
         run: teastore-auth
     spec:
+      nodeSelector:
+        dedicated: slave
       containers:
         - name: teastore-auth
           image: descartesresearch/teastore-auth
@@ -167,6 +175,8 @@ spec:
         app: teastore
         run: teastore-image
     spec:
+      nodeSelector:
+        dedicated: slave
       containers:
         - name: teastore-image
           image: descartesresearch/teastore-image
@@ -207,6 +217,8 @@ spec:
         app: teastore
         run: teastore-recommender
     spec:
+      nodeSelector:
+        dedicated: slave
       containers:
         - name: teastore-recommender
           image: descartesresearch/teastore-recommender
@@ -247,6 +259,8 @@ spec:
         app: teastore
         run: teastore-webui
     spec:
+      nodeSelector:
+        dedicated: slave
       containers:
         - name: teastore-webui
           image: descartesresearch/teastore-webui

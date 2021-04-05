@@ -4,8 +4,6 @@ metadata:
   name: grafana
   namespace: monitoring
 spec:
-  nodeSelector:
-    dedicated: master
   replicas: 1
   selector:
     matchLabels:
@@ -16,6 +14,8 @@ spec:
       labels:
         app: grafana
     spec:
+      nodeSelector:
+        dedicated: master
       containers:
       - name: grafana
         image: grafana/grafana:latest
