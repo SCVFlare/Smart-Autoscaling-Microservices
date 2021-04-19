@@ -20,6 +20,11 @@ spec:
           image: descartesresearch/teastore-db
           ports:
             - containerPort: 3306
+          resources: 
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
 ---
 apiVersion: v1
 kind: Service
@@ -57,6 +62,11 @@ spec:
           image: descartesresearch/teastore-registry
           ports:
             - containerPort: 8080
+          resources: 
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
 ---
 apiVersion: v1
 kind: Service
@@ -103,6 +113,11 @@ spec:
               value: "teastore-db"
             - name: DB_PORT
               value: "3306"
+          resources: 
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
 ---
 apiVersion: v1
 kind: Service
@@ -145,6 +160,11 @@ spec:
               value: "teastore-auth"
             - name: REGISTRY_HOST
               value: "teastore-registry"
+          resources: 
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
 ---
 apiVersion: v1
 kind: Service
@@ -187,6 +207,11 @@ spec:
               value: "teastore-image"
             - name: REGISTRY_HOST
               value: "teastore-registry"
+          resources: 
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
 ---
 apiVersion: v1
 kind: Service
@@ -229,6 +254,11 @@ spec:
               value: "teastore-recommender"
             - name: REGISTRY_HOST
               value: "teastore-registry"
+          resources: 
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
 ---
 apiVersion: v1
 kind: Service
@@ -271,6 +301,11 @@ spec:
               value: "teastore-webui"
             - name: REGISTRY_HOST
               value: "teastore-registry"
+          resources: 
+            limits:
+              cpu: 500m
+            requests:
+              cpu: 200m
 ---
 apiVersion: v1
 kind: Service
