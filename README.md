@@ -45,6 +45,13 @@
 
   -  `ssh grafana`
 
+- `kubectl autoscale deployment <teastore-deployment> --cpu-percent=50 --min=1 --max=10`
+
+- Check if all ok `kubectl get hpa`
+
+- You can load a particular microsevice(webui for example):
+  - `kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- https://<node_ip>:30080/tools.descartes.teastore.webui/; done"`
+
 # Slave  
 
 -  `git clone https://github.com/SCVFlare/TER-2021.git`
