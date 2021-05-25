@@ -86,8 +86,8 @@ data:
       
       - job_name: 'kube-state-metrics'
         honor_timestamps: true
-        scrape_interval: 1m
-        scrape_timeout: 1m
+        scrape_interval: 5s
+        scrape_timeout: 5s
         metrics_path: /metrics
         scheme: http
         static_configs:
