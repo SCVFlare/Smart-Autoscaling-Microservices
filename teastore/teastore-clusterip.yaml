@@ -22,9 +22,9 @@ spec:
             - containerPort: 3306
           resources: 
             limits:
-              cpu: 500m
+              cpu: 1000m
             requests:
-              cpu: 200m
+              cpu: 1000m
 ---
 apiVersion: v1
 kind: Service
@@ -64,9 +64,9 @@ spec:
             - containerPort: 8080
           resources: 
             limits:
-              cpu: 500m
+              cpu: 1000m
             requests:
-              cpu: 200m
+              cpu: 1000m
 ---
 apiVersion: v1
 kind: Service
@@ -115,9 +115,9 @@ spec:
               value: "3306"
           resources: 
             limits:
-              cpu: 500m
+              cpu: 1000m
             requests:
-              cpu: 200m
+              cpu: 1000m
 ---
 apiVersion: v1
 kind: Service
@@ -162,9 +162,9 @@ spec:
               value: "teastore-registry"
           resources: 
             limits:
-              cpu: 500m
+              cpu: 1000m
             requests:
-              cpu: 200m
+              cpu: 1000m
 ---
 apiVersion: v1
 kind: Service
@@ -209,9 +209,9 @@ spec:
               value: "teastore-registry"
           resources: 
             limits:
-              cpu: 500m
+              cpu: 1000m
             requests:
-              cpu: 200m
+              cpu: 1000m
 ---
 apiVersion: v1
 kind: Service
@@ -256,9 +256,9 @@ spec:
               value: "teastore-registry"
           resources: 
             limits:
-              cpu: 500m
+              cpu: 1000m
             requests:
-              cpu: 200m
+              cpu: 1000m
 ---
 apiVersion: v1
 kind: Service
@@ -303,9 +303,9 @@ spec:
               value: "teastore-registry"
           resources: 
             limits:
-              cpu: 500m
+              cpu: 1000m
             requests:
-              cpu: 200m
+              cpu: 1000m
 ---
 apiVersion: v1
 kind: Service
