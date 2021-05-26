@@ -8,8 +8,8 @@ metadata:
 data:
   prometheus.yml: |-
     global:
-      scrape_interval: 5s
-      evaluation_interval: 5s
+      scrape_interval: 15s
+      evaluation_interval: 15s
     rule_files:
       - /etc/prometheus/prometheus.rules
     alerting:
@@ -86,8 +86,6 @@ data:
       
       - job_name: 'kube-state-metrics'
         honor_timestamps: true
-        scrape_interval: 5s
-        scrape_timeout: 5s
         metrics_path: /metrics
         scheme: http
         static_configs:
