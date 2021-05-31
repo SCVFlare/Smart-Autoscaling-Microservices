@@ -50,7 +50,17 @@
 - Check if all ok `kubectl get hpa`
 
 - You can load a particular microsevice(webui for example):
-  - `kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- https://<node_ip>:30080/tools.descartes.teastore.webui/; done"`
+  - `kubectl run -i --tty load-generator --rm --image=busybox --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- https://<node_ip>:30080/tools.descartes.teastore.webui/; done"`  
+
+- OR use loadgenerator:
+  - `java -jar httploadgenerator.jar loadgenerator` - call the generator
+  - `$ java -jar httploadgenerator.jar director --ip <nodeIP> --load <arrivalrate.csv> -o <results.csv> --lua <script.lua>` - call the director, you could put both on the master machine  
+
+- Use Limbo in eclipse to genrate loads
+
+- use pytohn script to take out all neccesseary metrics
+
+- treat results with colab script
 
 # Slave  
 
