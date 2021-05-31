@@ -54,7 +54,7 @@
 
 - OR use loadgenerator:
   - `java -jar httploadgenerator.jar loadgenerator` - call the generator
-  - `$ java -jar httploadgenerator.jar director --ip <nodeIP> --load <arrivalrate.csv> -o <results.csv> --lua <script.lua>` - call the director, you could put both on the master machine  
+  - `java -jar httploadgenerator.jar director -s 10.1.1.1 -a ./<arrivalRate.csv> -l ./<script.lua> -o <output.csv> -t 256`-call the director, you could put both on the master machine  
 
 - Use Limbo in eclipse to genrate loads
 
