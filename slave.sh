@@ -1,3 +1,4 @@
+#Same as master but we don't setup any clusters
 sudo-g5k /grid5000/code/bin/g5k-setup-docker
 systemctl stop docker
 mv /var/lib/docker /tmp/docker

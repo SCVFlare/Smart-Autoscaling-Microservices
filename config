@@ -10,25 +10,25 @@ Host *.g5k
 
 Host teastore
   User bbechev
-  HostName 172.16.19.3
+  HostName <slave node ip>
   ProxyCommand ssh *.g5k -W %h:%p
   LocalForward 30080 localhost:30080
 
 Host kubernetes
   User bbechev
-  HostName 172.16.19.3
+  HostName <master node ip>
   ProxyCommand ssh *.g5k -W %h:%p
   LocalForward 8080 localhost:8080
 
 Host prometheus
   User bbechev
-  HostName 172.16.19.3
+  HostName <master node ip>
   ProxyCommand ssh *.g5k -W %h:%p
   LocalForward 30000 localhost:30000
 
 Host grafana
   User bbechev
-  HostName 172.16.19.3
+  HostName <master node ip>
   ProxyCommand ssh *.g5k -W %h:%p
   LocalForward 32000 localhost:32000
 

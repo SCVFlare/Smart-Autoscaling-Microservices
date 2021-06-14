@@ -1,0 +1,1 @@
+`https://github.com/kubernetes/kube-state-metrics/blob/master/docs/pod-metrics.md`. Check which metrics could be useful for you
